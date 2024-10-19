@@ -5,7 +5,7 @@ const app = express(); // Create an express application
 
 app.use(express.json()); // Middleware to parse JSON bodies
 
-// In-memory data store for users
+// dummy data
 const users = [
   {
     id: "1",
@@ -114,7 +114,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Something went wrong!" });
 });
 
-// Start the server on port 4000
+// server on port 4000
 app.listen(4000, () => {
   console.log("Server is running on port 4000");
 });
